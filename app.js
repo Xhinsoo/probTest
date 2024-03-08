@@ -3,6 +3,7 @@ const recruitBox = document.querySelector(".imgSrc");
 const inventory = document.querySelector(".inventory");
 const newUl = document.querySelector(".inventoryList");
 
+//recruit manager ()
 function recruitManager() {
   let brilliantBlessing = Math.random().toFixed(2);
   if (brilliantBlessing > 0.7) {
@@ -17,7 +18,7 @@ function recruitManager() {
     return recruitBox.src;
   }
 }
-
+//array of recruits
 const imgFiveArray = [
   "five1.jpg",
   "five2.jpg",
@@ -27,12 +28,16 @@ const imgFiveArray = [
 ];
 const imgFourArray = ["four1.jpg", "four2.jpg", "four3.jpg"];
 
+
+//push to inv
 function addToInventory() {
   const newLi = document.createElement("LI");
   newLi.innerText = `${recruitManager()}`;
   newUl.appendChild(newLi);
 }
 
+
+//execute 2 ()
 recruitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   recruitManager();
